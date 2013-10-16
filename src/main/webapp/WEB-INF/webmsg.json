@@ -1,0 +1,9 @@
+{
+   "WebMsgServlet": 
+      {  
+         "busName": "ReverseAjaxBus", 
+ 	 	 "destination": "Default.Topic.Space", 
+         "clientCanPublish": true,
+         "longPollTimeout": 30
+      }
+}

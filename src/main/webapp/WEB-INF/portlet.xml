@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" id="com.ibm.realtimetasklist.RealtimeTaskListPortlet.a089a59253">
+	<portlet>
+		<portlet-name>TaskListPortlet</portlet-name>
+		<display-name xml:lang="en">TaskListPortlet</display-name>
+		<display-name>TaskListPortlet</display-name>
+		<portlet-class>com.ibm.realtimetasklist.TaskListPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>com.ibm.realtimetasklist.nl.TaskListPortletResource</resource-bundle>
+		<portlet-info>
+			<title>TaskListPortlet</title>
+			<short-title>TaskListPortlet</short-title>
+			<keywords>TaskListPortlet</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>TaskAdminPortlet</portlet-name>
+		<display-name xml:lang="en">TaskAdminPortlet</display-name>
+		<display-name>TaskAdminPortlet</display-name>
+		<portlet-class>com.ibm.realtimetasklist.TaskAdminPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>com.ibm.realtimetasklist.nl.TaskAdminPortletResource</resource-bundle>
+		<portlet-info>
+			<title>TaskAdminPortlet</title>
+			<short-title>TaskAdminPortlet</short-title>
+			<keywords>TaskAdminPortlet</keywords>
+		</portlet-info>
+	</portlet>
+	<default-namespace>http://RealtimeTaskList/</default-namespace>
+</portlet-app>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>RealtimeTaskList</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+	    <description></description>
+	    <display-name>Publisher</display-name>
+	    <servlet-name>Publisher</servlet-name>
+		<servlet-class>
+	        com.ibm.websphere.webmsg.publisher.jndijms.JmsPublisherServlet
+	    </servlet-class>
+	    <init-param>
+	        <description></description>
+	        <param-name>CONNECTION_FACTORY_JNDI_NAME</param-name>
+	        <param-value>java:comp/env/jms/reverseajax</param-value>
+	    </init-param>
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+	    <description/>
+	    <display-name>WebMsgServlet</display-name>
+	    <servlet-name>WebMsgServlet</servlet-name>
+	    <servlet-class>com.ibm.websphere.webmsg.servlet.WebMsgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>WebMsgServlet</servlet-name>
+	    <url-pattern>/webmsgServlet</url-pattern>
+	</servlet-mapping>	
+		<resource-ref id="ResourceRef_1224558884500">
+	    <description></description>
+	    <res-ref-name>jms/reverseajax</res-ref-name>
+	    <res-type>javax.jms.TopicConnectionFactory</res-type>
+	    <res-auth>Container</res-auth>
+	    <res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>		
+</web-app>
